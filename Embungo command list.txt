@@ -1,0 +1,19 @@
+Jump line //Jumps to line
+JumpIfPos line //Jump to line if acc value is pos
+JumpIfNeg line //Jump to line if acc value is neg
+JumpIfZero line //Jump to line if acc value is zero
+
+Load line //Load value in line to acc
+Store line //Store value in acc to line
+Set value //Set value of acc
+
+Add line //Adds value of line to acc
+Sub line //Subtracts value of line from acc
+Mult line //Multiplies value of line with acc
+Div line // acc div line value
+Mod line // acc mod line value
+
+APrint //Prints acc value as ascii
+VPrint //Prints acc value
+
+Done //Signals end of program
