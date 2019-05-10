@@ -6,7 +6,7 @@ class Commands:
             global headLocation
             if type(a) != int:
                 a = int(a)
-            headLocation = a-2
+            headLocation = a-1
             return True
 
         def jumpPos(a):
@@ -14,7 +14,7 @@ class Commands:
             if type(a) != int:
                 a = int(a)
             if acc > 0:
-                headLocation = a-2
+                headLocation = a-1
             return True
         
         def jumpNeg(a):
@@ -22,7 +22,7 @@ class Commands:
             if type(a) != int:
                 a = int(a)
             if acc < 0:
-                headLocation = a-2
+                headLocation = a-1
             return True
 
         def jumpZero(a):
@@ -30,7 +30,7 @@ class Commands:
             if type(a) != int:
                 a = int(a)
             if acc == 0:
-                headLocation = a-2
+                headLocation = a-1
             return True
 
         def done(a):
@@ -156,10 +156,9 @@ def runTape():
     while(True):
         command = getDat(headLocation)
         #print(command)
+        headLocation += 1
         if runCommand(command) == False:
             return
-
-        headLocation += 1
 
 def getDat(line):
     global tape
