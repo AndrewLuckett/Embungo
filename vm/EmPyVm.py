@@ -1,7 +1,7 @@
 #Embungo vm
 
 class Commands:
-    class jumps:
+    class Jumps:
         def jump(a):
             global headLocation
             if type(a) != int:
@@ -44,7 +44,7 @@ class Commands:
             "done":done
         }
 
-    class mem:
+    class Mem:
             def load(a):
                 global acc
                 if type(a) != int:
@@ -72,7 +72,7 @@ class Commands:
                 "set":seta
             }
 
-    class math:
+    class Math:
         def add(a):
             global acc
             if type(a) != int:
@@ -116,7 +116,7 @@ class Commands:
             "mod":mod
         }
 
-    class io:
+    class Io:
         def aprint(a):
             global acc
             print(chr(acc),end="")
@@ -139,10 +139,10 @@ acc = 0
 tape = []
 commands = {}
 
-commands.update(Commands.jumps.commands)
-commands.update(Commands.mem.commands)
-commands.update(Commands.io.commands)
-commands.update(Commands.math.commands)
+commands.update(Commands.Jumps.commands)
+commands.update(Commands.Mem.commands)
+commands.update(Commands.Io.commands)
+commands.update(Commands.Math.commands)
 
 def loadTape(location):
     global tape
@@ -172,8 +172,8 @@ def runCommand(command):
     if len(command) == 0:
         print(">> ERR: Tried to execute an empty line") 
         return False
+    
     com = command[0].lower()
-
     func = commands.get(com)
 
     if func == None:
