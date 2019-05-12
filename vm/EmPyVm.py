@@ -162,6 +162,9 @@ def runTape():
 
 def getDat(line):
     global tape
+    if type(tape[line]) == int:
+        return [tape[line]] #Expected to return an array
+    
     command = tape[line].split("//")[0].split(" ")
     while command.count(""):
         command.remove("")
@@ -177,7 +180,7 @@ def runCommand(command):
     func = commands.get(com)
 
     if func == None:
-        print(">> ERR: Tried to execute an invalid command")
+        print(">> ERR: Tried to execute an invalid command :",com)
         return False
 
     if len(command) == 1:
