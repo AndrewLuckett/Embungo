@@ -130,7 +130,9 @@ class Commands:
         def inp(a):
             global acc
             inpu = input()
-            if type(inpu) == str:
+            try:
+                inpu = int(inpu)
+            except:
                 inpu = ord(inpu[0])
             acc = inpu
             return True
