@@ -45,32 +45,32 @@ class Commands:
         }
 
     class Mem:
-            def load(a):
-                global acc
-                if type(a) != int:
-                    a = int(a)
-                acc = int(getDat(a-1)[0])
-                return True
+        def load(a):
+            global acc
+            if type(a) != int:
+                a = int(a)
+            acc = int(getDat(a-1)[0])
+            return True
 
-            def store(a):
-                global acc, tape
-                if type(a) != int:
-                    a = int(a)
-                tape[a-1] = acc
-                return True
+        def store(a):
+            global acc, tape
+            if type(a) != int:
+                a = int(a)
+            tape[a-1] = acc
+            return True
 
-            def seta(a):
-                global acc
-                if type(a) != int:
-                    a = int(a)
-                acc = a
-                return True
+        def seta(a):
+            global acc
+            if type(a) != int:
+                a = int(a)
+            acc = a
+            return True
 
-            commands = {
-                "load":load,
-                "store":store,
-                "set":seta
-            }
+        commands = {
+            "load":load,
+            "store":store,
+            "set":seta
+        }
 
     class Math:
         def add(a):
