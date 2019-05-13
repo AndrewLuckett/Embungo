@@ -127,9 +127,18 @@ class Commands:
             print(acc, end="")
             return True
 
+        def inp(a):
+            global acc
+            inpu = input()
+            if type(inpu) == str:
+                inpu = ord(inpu[0])
+            acc = inpu
+            return True
+
         commands = {
             "aprint":aprint,
-            "vprint":vprint
+            "vprint":vprint,
+            "input":inp
         }
 
 #######

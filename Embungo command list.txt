@@ -15,5 +15,6 @@ Mod line // acc mod line value
 
 APrint //Prints acc value as ascii
 VPrint //Prints acc value
+Input //Takes the users input. User can input an int or a char
 
 Done //Signals end of program
