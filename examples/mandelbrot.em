@@ -17,7 +17,7 @@ Sub 2
 JumpIfZero 31 //NewLine
 Load 6
 Sub 2
-JumpIfZero 12 //Done
+JumpIfPos 12 //Done
 Load 5
 Add 3 //One
 Store 5
