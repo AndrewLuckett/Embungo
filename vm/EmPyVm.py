@@ -184,8 +184,8 @@ def getDat(line):
 def runCommand(command):
     global acc,headLocation
     if len(command) == 0:
-        print(">> ERR: Tried to execute an empty line") 
-        return False
+        #print(">> ERR: Tried to execute an empty line") 
+        return True
     
     com = command[0].lower()
     func = commands.get(com)
