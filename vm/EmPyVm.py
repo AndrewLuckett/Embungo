@@ -136,6 +136,13 @@ class Commands:
             "run":run
         }
 
+
+commands = {}
+commands.update(Commands.Jumps.commands)
+commands.update(Commands.Mem.commands)
+commands.update(Commands.Io.commands)
+commands.update(Commands.Math.commands)
+
 #######
 class Vm:
     def __init__(this, location):
@@ -145,13 +152,7 @@ class Vm:
                 this.tape.append(line.replace("\n",""))
         this.fileLocation = location
         this.headLocation = 0
-        this.acc = 0
-        
-        this.commands = {}
-        this.commands.update(Commands.Jumps.commands)
-        this.commands.update(Commands.Mem.commands)
-        this.commands.update(Commands.Io.commands)
-        this.commands.update(Commands.Math.commands)
+        this.acc = 0        
 
     def runTape(this):
         while(True):
@@ -176,7 +177,7 @@ class Vm:
             return True
         
         com = command[0].lower()
-        func = this.commands.get(com)
+        func = commands.get(com)
 
         if func == None:
             print(">> ERR: Tried to execute an invalid command :",com,this.fileLocation)
