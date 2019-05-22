@@ -17,6 +17,8 @@ APrint //Prints acc value as ascii
 VPrint //Prints acc value
 Input //Takes the users input. User can input an int or a char
 
+Run file //Runs that file sharing acc value 
+
 Done //Signals end of program
 
 //Empty lines will be skipped over
