@@ -92,9 +92,9 @@ APrint //Print(" ")
 APrint //Print(" ")
 Jump 100//Forward
 
-Set 42
+Set 47
 APrint //Print("*")
-Set 32
+Set 92
 APrint //Print(" ")
 
 Load 6 //X
